@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseaase Classifier</title>
+    <style>
+        /* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+/* Form container styles */
+/* Form styles */
+form {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+/* Input styles */
+input[type="file"] {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+input[type="submit"] {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+/* Result styles */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Uploaded image styles */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+.navbar {
+    background-color: #007BFF;
+    height: 1rem;   
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px; /* Add padding to increase readability */
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-top: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./index.html">Classification</a>
+        <a href="./ndvi.html">NDVI</a>
+    </div>
+    <h1>Disease Classifier</h1>
+    <p> Input an image to classify it as either healthy or diseased.</p>
+
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="imageInput" accept=".jpg, .jpeg, .png">
+        <input type="submit" value="Classify">
+    </form>
+
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    <img src="{{ uploaded_image }}" alt="Uploaded Image">
+    <h3><center>Info:</center></h3>
+    <p>{{ info }}</p>
+    <h3><center>Treatment</center></h3>
+    <p>{{ treat }}</p>
+    {% endif %}
+</body>
+</html>
