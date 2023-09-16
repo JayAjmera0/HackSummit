@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Analysis Hub</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+    background-color: #007BFF;
+    height: 1rem;   
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px; /* Add padding to increase readability */
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-top: 10px;
+    }
+}
+
+
+ 
+
+        .content {
+            padding: 20px;
+            align-items: center;
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh; /* Ensure full viewport height */
+    text-align: center;
+        }
+/* Center the content horizontally and vertically */
+
+
+/* Center the form horizontally */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ 
+
+        .upload-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+ 
+
+        input[type="file"] {
+            display: block;
+            margin: 10px 0;
+            
+        }
+
+ 
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            justify-content: center;
+        }
+
+ 
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+ 
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+ 
+
+        h2 {
+            color: #333;
+        }
+</style>
+</head>
+<body>
+
+ 
+
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./index.html">Classification</a>
+        <a href="./ndvi.html">NDVI</a>
+    </div>
+
+ 
+
+
+<h1>Welcome to <b>NDVI Analysis</b></h1>
+
+
+<div class="content" id="ndvi">
+<div class="upload-form">
+    <form method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Color Image:</td>
+            <td><input type="file" name="color_image"></td>
+        </tr>
+        <tr>
+            <td>NIR Image:</td>
+            <td><input type="file" name="nir_image"></td>
+        </tr>
+        <tr>
+            <td colspan="2" ><input type="submit" value="Upload"></td>
+        </tr>
+    </table>
+    </form>
+    
+    
+</div>
+
+
+ 
+ 
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRI-SENSE</title>
+    
+    <style>
+        /* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and font family */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007BFF;
+    height: 1rem;   
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px; /* Add padding to increase readability */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+
+/* Content styles */
+.content {
+    margin: 20px auto;
+    max-width: 1800px; /* Adjust the maximum content width as needed */
+    
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Center the content horizontally */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Add some spacing between elements */
+.space-between {
+    margin-top: 20px;
+}
+
+/* Page title styles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Add a button style */
+.button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-top: 10px;
+    }
+}
+
+/* Additional styling can be added as needed */
+
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./index.html">Classification</a>
+        <a href="./ndvi.html">NDVI</a>
+    </div>
+
+    <!-- Your existing content here -->
+    <div class="content">
+        <img src="./AGRI-SENSE3.jpg" alt="NDVI">
+    </div>
+</body>
+</html>
